@@ -1,0 +1,12 @@
+site_name: ANGEL Documentation
+site_description: Documentation for ANGEL Toolkit Manager
+repo_url: https://github.com/nipudarsh/Angel
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Quickstart: quickstart.md
+  - CLI Reference: cli-reference.md
+  - API Reference: api-reference.md
+  - Configuration: configuration.md
+theme:
+  name: material
