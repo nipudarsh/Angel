@@ -2,12 +2,6 @@
 from __future__ import annotations
 
 import click
-from rich.console import Console
-
-from angel_cli.commands import auth, config, maintenance, repos, tools
-
-console = Console()
-
 
 @click.group(help="ANGEL CLI - manage tools and repositories.")
 @click.option("--config-path", type=click.Path(), help="Custom config path.")

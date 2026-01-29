@@ -1,5 +1,4 @@
 click>=8.1.7
-rich>=13.7.0
 fastapi>=0.110.0
 uvicorn>=0.27.1
 jinja2>=3.1.3

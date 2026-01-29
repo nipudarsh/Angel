@@ -68,10 +68,7 @@ try {
         throw "Virtual environment not created."
     }
 
-    & $venvPython -m pip install --upgrade pip
-    & $venvPython -m pip install -r requirements.txt
-    if ($DevMode) {
-        & $venvPython -m pip install -r requirements-dev.txt
+
     }
     & $venvPython -m pip install -e .
 
