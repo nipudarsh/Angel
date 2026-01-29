@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling>=1.24.2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "angel-toolkit"
+version = "0.1.0"
+description = "ANGEL: Automated Navigator for Gathering and Executing Local tools"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "ANGEL Contributors" }]
+keywords = ["cli", "tooling", "fastapi", "tool-manager"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+  "click>=8.1.7",
+  "fastapi>=0.110.0",
+  "uvicorn>=0.27.1",
+  "jinja2>=3.1.3",
+  "sqlalchemy>=2.0.25",
+  "pydantic>=2.6.1",
+  "passlib[bcrypt]>=1.7.4",
+  "itsdangerous>=2.1.2",
+  "pyjwt>=2.8.0",
+  "aiofiles>=23.2.1",
+  "gitpython>=3.1.41",
+]
+
+[project.optional-dependencies]
+dev = [
+  "black>=24.2.0",
+  "ruff>=0.2.2",
+  "mypy>=1.8.0",
+  "pytest>=8.0.0",
+  "pytest-asyncio>=0.23.5",
+  "pytest-cov>=4.1.0",
+  "httpx>=0.26.0",
+  "pre-commit>=3.6.0",
+]
+
+[project.scripts]
+angel = "angel_cli.cli:main"
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "I", "B"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+
+[tool.pytest.ini_options]
+addopts = "-ra --cov=angel_cli --cov=angel_web"
+asyncio_mode = "auto"
