@@ -3,8 +3,6 @@ from __future__ import annotations
 
 import click
 
-from angel_cli.commands import auth, config, maintenance, repos, tools
-
 @click.group(help="ANGEL CLI - manage tools and repositories.")
 @click.option("--config-path", type=click.Path(), help="Custom config path.")
 @click.pass_context

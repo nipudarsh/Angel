@@ -12,7 +12,9 @@ ANGEL (Automated Navigator for Gathering and Executing Local tools) is a cross-p
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # Windows: .\.venv\Scripts\Activate.ps1
+
 pip install --prefer-binary -r requirements.txt
+
 pip install -e .
 angel init
 angel web
@@ -22,11 +24,7 @@ angel web
 Configuration is stored in `~/.config/angel/config.toml` (Linux/macOS) or `%APPDATA%\angel\config.toml` (Windows). Use `angel config` to manage settings.
 
 ## Development
-```bash
-pip install --prefer-binary -r requirements-dev.txt
-pre-commit install
-pytest
-```
+
 
 ## License
 MIT

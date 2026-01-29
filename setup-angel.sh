@@ -18,8 +18,7 @@ fi
 
 python -m venv .venv
 source .venv/bin/activate
-pip install --upgrade pip setuptools wheel
-pip install --prefer-binary -r requirements.txt
+
 pip install -e .
 
 if ! git remote | grep -q origin; then

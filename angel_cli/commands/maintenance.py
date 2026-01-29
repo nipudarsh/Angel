@@ -2,6 +2,7 @@
 import click
 
 
+
 @click.group(name="maintenance", help="Maintenance tasks.")
 def group() -> None:
     """Maintenance command group."""
@@ -10,4 +11,4 @@ def group() -> None:
 @group.command("doctor")
 def doctor() -> None:
     """Run a health check."""
-    click.echo("All checks passed (stub).")
+
